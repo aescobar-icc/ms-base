@@ -1,0 +1,22 @@
+version: '3.5'
+services:
+  ms-base:
+    networks: 
+      - ms-common-net
+    image: aescobaricc/ms-base:0.0.1
+    container_name: ms-base
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BRANCH_UTIL_LIB: master
+        BRANCH_UTIL_MODEL: master
+    env_file: .env
+    volumes:
+      - .:/app-run
+    ports:
+      - "8181:8000"
+networks:
+  ms-common-net:
+    name: ms-common-net

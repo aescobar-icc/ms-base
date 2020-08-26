@@ -1,0 +1,47 @@
+openapi: "3.0.0"
+info:
+  title: Service Base
+  version: "1.0.0"
+  description: This is a base service used for python based microservices  
+servers:
+  - url: /base/api/v1
+
+# Paths supported by the server application
+paths:
+  /echo:
+    post:
+      operationId: "service.ServiceFacade.ServiceFacade.echo"
+      tags:
+      - "TEST"
+      summary: echo service summary
+      description: echo service summary
+      requestBody:
+        description: echo request body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        200:
+          description: "Action creted Success"
+        400:
+          description: "Error Format Data"
+        500:
+          description: "Internal server error"
+  
+components:
+  schemas:
+    User:
+      type: "object"
+      required: 
+      - "username"
+      properties: 
+        username:
+          type: "string"
+          description: "user name"
+          example: "master"
+        email:
+          type: "string"
+          description: "user mail"
+          example: "dev@grupoalto.com"

@@ -8,7 +8,7 @@ For use this image you need install Docker Compose. You can run Compose on macOS
 
 ***1.2.- Using `docker-compose`***  
 For build and run use:  
-> cd ms-base
+> cd ms-base  
 > docker-compose up --build
 
 ***1.3- See swagger UI***  

@@ -12,6 +12,7 @@ For build and run use:
 > docker-compose up --build
 
 ***1.3- See swagger UI***  
+Before run this service
 For visualize OpenAPI Specification definitions in an interactive swagger UI go to:  
 >
 > [http://localhost:8181/base/api/v1/ui/](http://localhost:8181/base/api/v1/ui/).
